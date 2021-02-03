@@ -2,7 +2,7 @@
 
 name: CxFlow
 
-# Controls when the action will run. Triggers the workflow on push or pull request
+# This workflow controls when the job is triggered to pull or push
 # events but only for the master branch
 on:
   push:
