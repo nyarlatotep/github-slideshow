@@ -18,7 +18,7 @@ on:
 
 jobs:
   snyk:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest, mac and windows
     steps:
       - uses: actions/checkout@v2
       - name: Run Snyk to check configuration files for security issues
@@ -30,12 +30,12 @@ jobs:
           # In order to use the Snyk Action you will need to have a Snyk API token.
           # More details in https://github.com/snyk/actions#getting-your-snyk-token
           # or you can signup for free at https://snyk.io/login
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          SNYK_TOKEN: https://snyk.io/login
         with:
           # Add the path to the configuration file that you would like to test.
           # For example `deployment.yaml` for a Kubernetes deployment manifest
           # or `main.tf` for a Terraform configuration file
-          file: checkmarx-cxflow-action.yaml
+          file: nyarlatotep/github-slideshow
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v1
         with:
